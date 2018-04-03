@@ -14,7 +14,7 @@
       </div>
       <p class="intro opacity-fade">I am a British expat living in Copenhagen and working as an independent <i>creative developer</i>.</p>
       <p class="intro opacity-fade">I have over six years professional experience using css, html and javascript to create a broad range of digital solutions.</p>
-      <a href="" class="mail opacity-fade">HELLO@JAMTHOM.COM</a>
+      <a href="mailto:hello@jamthom.io" class="mail opacity-fade">HELLO@JAMTHOM.IO</a>
   </div>
 </template>
 
@@ -26,6 +26,8 @@ export default {
 </script>
 
 <style lang="scss">
+
+@import '~@/styles/vars.scss';
 
 @keyframes rotate {
   from {
@@ -78,12 +80,16 @@ export default {
 }
 
 .business-card {
-  width: 20em;
+  max-width: 20em;
+  width: 100%;
   position: fixed;
   top: 50vh;
   left: 50vw;
   transform: translate(-50%,-50%);
   text-align: center;
+  @include breakpoint(xs) {
+    padding: 0 20px;
+  }
 }
 
 .card-portrait {
@@ -113,7 +119,9 @@ export default {
   line-height: 17px;
   letter-spacing: 0.3px;
   margin-bottom: 15px;
-  color: rgba(255, 255, 255, 0.6);
+  position: relative;
+  color: rgb(178, 177, 198);
+  z-index: 1;
 }
 
 i {

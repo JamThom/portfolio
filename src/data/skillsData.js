@@ -15,6 +15,7 @@ import si from '@/assets/si.png'
 import gu from '@/assets/gu.png'
 import np from '@/assets/np.png'
 import re from '@/assets/re.png'
+import su from '@/assets/su.png'
 import ty from '@/assets/ty.png'
 import sv from '@/assets/sv.png'
 import ht from '@/assets/ht.png'
@@ -51,12 +52,12 @@ export default {
     description: 'framework',
     logo: si
   },{ 
-    name: 'angular',
+    name: 'Sublime',
     top: '54.6%',
     left: '14.9%',
-    years: 0,
+    years: 6,
     description: 'framework',
-    logo: an
+    logo: su
   },{ 
     name: 'Gulp',
     top: '59.8%',

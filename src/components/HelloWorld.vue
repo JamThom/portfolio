@@ -17,9 +17,6 @@ export default {
   mounted() {
     this.enter(this.$el);
   },
-  beforeDestroy() {
-    console.log('ARRGHH')
-  },
   methods: {
     enter(el) {
       this.timeline = anime.timeline()

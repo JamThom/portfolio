@@ -59,12 +59,13 @@ export default {
 
       const videos = this.$el.querySelectorAll('video')
 
-      videos.forEach(video => {
+      videos.forEach((video,i) => {
+
         const timeline = anime.timeline({
           autoplay: false
         })
         .add({
-          targets: '.work-item:first-child .fade',
+          targets: `.work-item:nth-child(${i}) .fade`,
           opacity: [0,1],
           easing: 'easeInOutSine',
           delay(e,i) {
@@ -75,19 +76,25 @@ export default {
         if (video.readyState === 4) {
           timeline.play()
         } else {
-          video.onplay = x => { timeline.play() }
+          video.onplay = x => { 
+            timeline.play()
+          }
         }
       })
     }
   },
   mounted() {
-    this.loadFade()
-    this.$el.addEventListener('scroll',scroll)
-    scroll()
+
+    if (navigator.userAgent.match(/Chrome/g)) {
+      window.addEventListener('scroll',scroll,false)
+      scroll()
+      this.loadFade()
+    } else {
+      document.querySelector('.work-showcase').classList.add('safari')
+    }
 
     function scroll() {
       const items = document.querySelectorAll('.work-item')
-
       items.forEach(item => {
         const wrap = item.querySelector('.item-wrapper')
         const progress = Math.min(Math.max(1 - (item.getBoundingClientRect().y/window.innerHeight),0),1) * 100
@@ -105,10 +112,21 @@ export default {
 <style scoped lang="scss">
 
 .work-showcase {
-  height: 100%;
-  position: fixed;
-  width: 100%;
-  overflow: scroll;
+  z-index: 0;
+  &.safari {
+    .work-item {
+      .item-wrapper {
+        position: static;
+        height: 100% !important;
+        border: 0;
+        background: none;
+      }
+      .inner {
+        background: none;
+        position: static;
+      }
+    }
+  }
 }
 
 .work-item {
@@ -119,7 +137,6 @@ export default {
     left: 0;
     right: 0;
     overflow: hidden;
-    height: 50vh;
     border-top: 2px white solid;
   }
   .inner {

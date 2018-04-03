@@ -41,7 +41,7 @@ export default [{
     value: 'Anime, jQuery'
   },{
     name: 'Description',
-    value: 'Online car rental shop.'
+    value: 'Online car rental shop featuring 3d cards.'
   }]
 }, {
   subtitle: 'yearly report site',
@@ -60,7 +60,7 @@ export default [{
     value: 'Vue, Anime'
   },{
     name: 'Description',
-    value: 'A mobile blah blah blah blah blah blahds blah blah blah blah blah blah blah blah blah blah blah blah'
+    value: 'The yearly report for for DFF, featuring silky smooth page transitions and other ui nicities.'
   }]
 }, {
   subtitle: 'interactive infographic',
@@ -111,7 +111,7 @@ export default [{
     value: 'Ongoing'
   },{
     name: 'Role',
-    value: 'Developer & designer'
+    value: 'Everything'
   },{
     name: 'Tech stack',
     value: 'Three.js, Angularjs, Vue, Pixi.js'
