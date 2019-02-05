@@ -3,6 +3,7 @@ import { MOBILE_WIDTH } from 'Constants'
 import Icon from 'Styles/icon'
 import Tooltip from 'Styles/tooltip'
 import Outer from 'Styles/planet'
+import TooltipInner from 'Styles/tooltip-inner'
 import ReactGA from 'react-ga'
 
 class Orbit {
@@ -95,7 +96,9 @@ export default class Planet extends Component {
       href={href}
       onClick={this.handleClick.bind(this)}>
       <Outer ref="planet">
-        <Tooltip>{children}</Tooltip>
+        <Tooltip>
+          <TooltipInner>{children}</TooltipInner>
+        </Tooltip>
         <Icon
           index={index}
           className={`icon-${icon}`}/>

@@ -18,14 +18,16 @@ export default styled.i`
   align-items: center;
   cursor: pointer;
   border-radius: 50%;
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 90%;
   font-style: normal;
-  transition: .3s;
   animation: ${animateIn} 1s;
   animation-delay: ${(props) => .6 + (props.index / 10)}s;
   animation-fill-mode: both;
+  transition: .1s;
   @media (max-width: ${MOBILE_WIDTH}px) {
     font-size: 1.75rem;
   }

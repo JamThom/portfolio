@@ -9,15 +9,24 @@ export default styled.div`
   top: 50%;
   left: 50%;
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &:hover i {
-    transform: scale(1.1);
+    width: 100%;
+    height: 100%;
+  }
+  &:active i {
+    width: 80%;
+    height: 80%;
   }
   &:hover {
     z-index: 1;
   }
   &:hover div {
     opacity: 1;
-    transform: translate(-50%,-20%);
+    pointer-events: all;
+    transform: translate(-50%,-100%);
   }
   @media (max-width: ${MOBILE_WIDTH}px) {
     width: 4rem;
