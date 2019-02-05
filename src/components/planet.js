@@ -3,6 +3,7 @@ import { MOBILE_WIDTH } from 'Constants'
 import Icon from 'Styles/icon'
 import Tooltip from 'Styles/tooltip'
 import Outer from 'Styles/planet'
+import ReactGA from 'react-ga'
 
 class Orbit {
   constructor({ ele, index, total }) {
@@ -12,6 +13,7 @@ class Orbit {
     this.frame = Date.now();
     this.speed = 30 * (1 + ((this.index)*2));
     this.radius = 3.2 * ((this.index)+1.6);
+    this.orbiting = true;
     this.init();
   }
 
@@ -44,17 +46,18 @@ class Orbit {
   }
 
   resumeOrbit() {
-    this.beginOrbit();
+    this.orbiting = true;
+    setTimeout(this.beginOrbit.bind(this),200);
   }
 
   beginOrbit() {
-    this.orbiting = true;
     this.animateOrbitFrame();
   }
 
   animateOrbitFrame() {
-    this.frame++;
     const { frame, ele, index, orbiting, speed, radius } = this;
+    if (!orbiting) return
+    this.frame++;
     const offsetFrame = frame + index * 20000;
     const currentPosition = offsetFrame/speed;
     ele.style.transform = `translate(${
@@ -62,7 +65,7 @@ class Orbit {
     }rem,${
       Math.cos(currentPosition) * radius
     }rem)`;
-    if (orbiting) requestAnimationFrame(this.animateOrbitFrame.bind(this));
+    requestAnimationFrame(this.animateOrbitFrame.bind(this));
   }
 }
 
@@ -76,11 +79,21 @@ export default class Planet extends Component {
     })
   }
 
+  handleClick(e) {
+    e.preventDefault();
+    ReactGA.event({
+      category: 'Social',
+      action: 'Clicked social link',
+      value: this.props.icon
+    });
+    window.open(this.props.href);
+  }
+
   render() {
     const { children, icon, index, href, total } = this.props;
     return <a
       href={href}
-      target="blank">
+      onClick={this.handleClick.bind(this)}>
       <Outer ref="planet">
         <Tooltip>{children}</Tooltip>
         <Icon
