@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'fontello';
+    src: url('fontello.woff2') format('woff2'),
+        url('fontello.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+.icon-github:before { content: '\e800'; } /* '' */
+.icon-mail:before { content: '\e801'; } /* '' */
+.icon-personal:before { content: '\e804'; } /* '' */
+.icon-instagram:before { content: '\f16d'; } /* '' */
+.icon-linkedin:before { content: '\f30c'; } /* '' */
