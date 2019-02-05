@@ -9,6 +9,9 @@
     "dev": "webpack-dev-server --open --config webpack.dev.config.js",
     "build": "webpack --config webpack.prod.config.js"
   },
+  "resolutions": {
+    "terser": "3.14.1"
+  },
   "dependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-react": "^7.0.0",
