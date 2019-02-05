@@ -53,7 +53,7 @@ module.exports = {
       'Data': path.resolve(__dirname, 'src/data.js'),
       'Constants': path.resolve(__dirname, 'src/constants.js')
     },
-    extensions: ['*', '.js', '.vue', '.json']
+    extensions: ['*', '.js', '.json']
   },
   devServer: {
     historyApiFallback: true,
