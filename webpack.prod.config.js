@@ -4,6 +4,7 @@ const PrerenderSPAPlugin = require('prerender-spa-plugin')
 const merge = require('webpack-merge');
 const common = require('./webpack.common.config.js');
 const webpack = require('webpack')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = merge(common, {
   mode: 'production',
@@ -27,7 +28,8 @@ module.exports = merge(common, {
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
-    })
+    }),
+    new FaviconsWebpackPlugin('./favicon.png')
   ],
   devtool: '#source-map'
 });
