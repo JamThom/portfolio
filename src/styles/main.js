@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export default styled.div`
+export default styled.main`
   background-image: radial-gradient(50% 150%, #FFFFFF 50%, #E9E9E9 100%);
   position: fixed;
   top: 0;
@@ -10,4 +10,5 @@ export default styled.div`
   margin: 0;
   height: 100%;
   color: #5C5C5C;
+  display: block;
 `

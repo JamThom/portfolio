@@ -1,11 +1,11 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const PrerenderSPAPlugin = require('prerender-spa-plugin')
+const PrerenderSPAPlugin = require('prerender-spa-plugin');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.config.js');
-const webpack = require('webpack')
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
-const SocialTags = require('social-tags-webpack-plugin')
+const webpack = require('webpack');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const SocialTags = require('social-tags-webpack-plugin');
 
 module.exports = merge(common, {
   mode: 'production',
@@ -40,9 +40,7 @@ module.exports = merge(common, {
         'og:description': 'Freelance frontend developer based in Copenhagen',
         'og:site_name': 'JamThom',
         'og:locale': 'en_UK',
-        'og:article:author': 'James Thomson',
-        'og:image:width': '708',
-        'og:image:height': '708'
+        'og:article:author': 'James Thomson'
       },
       twitter: {
         'twitter:card': 'summary',
