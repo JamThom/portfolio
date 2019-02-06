@@ -41,6 +41,8 @@ module.exports = merge(common, {
         'og:site_name': 'JamThom',
         'og:locale': 'en_UK',
         'og:article:author': 'James Thomson',
+        'og:image:width': '708',
+        'og:image:height': '708'
       },
       twitter: {
         'twitter:card': 'summary',
