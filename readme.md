@@ -6,11 +6,9 @@
 
 ### To do
 
-  - favicon
   - styled components ssr
   - eslinting
   - proptype validation
-  - upload personal site
-  - work on mobile design
+  - updated mobile design
   - fix terser bug
   - copy email address on click
