@@ -6,9 +6,11 @@
 
 ### To do
 
-  - open graph tags
   - favicon
+  - styled components ssr
   - eslinting
   - proptype validation
+  - upload personal site
+  - work on mobile design
   - fix terser bug
   - copy email address on click

@@ -4,8 +4,13 @@
     <meta charset="utf-8">
     <meta name=viewport content="width=device-width,initial-scale=1">
     <title>James Thomson - Frontend developer Copenhagen</title>
+    <meta property="og:title" content="James Thomson" />
+    <meta property="og:description" content="Frontend developer, Copenhagen" />
+    <meta property="og:url" content="http://www.jamthom.io" />
+    <meta property="og:image" content="http://www.jamthom.io/me.jpg" />
   </head>
-  <body>
+  <style>body.unloaded {display: none;}</style>
+  <body class="unloaded">
     <div id="app"></div>
     <% if ('%NODE_ENV%' === 'development') { %>
       <script type="text/javascript" src="/dist/build.js"></script>

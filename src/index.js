@@ -8,3 +8,5 @@ ReactGA.initialize('UA-133839923-1');
 ReactGA.pageview(window.location.pathname);
 
 ReactDOM.render(<App />, document.getElementById('app'));
+
+document.body.classList.remove('unloaded');
