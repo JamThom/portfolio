@@ -12,7 +12,7 @@ class Orbit {
     this.index = index + 1;
     this.total = total;
     this.frame = Date.now();
-    this.speed = 30 * (1 + ((this.index)*2));
+    this.speed = 70 * (1 + ((this.index)*2));
     this.radius = 3.2 * ((this.index)+1.6);
     this.orbiting = true;
     this.init();
@@ -43,12 +43,13 @@ class Orbit {
   }
 
   pauseOrbit() {
+    clearTimeout(this.timeout);
     this.orbiting = false;
   }
 
   resumeOrbit() {
     this.orbiting = true;
-    setTimeout(this.beginOrbit.bind(this),200);
+    this.timeout = setTimeout(this.beginOrbit.bind(this),200);
   }
 
   beginOrbit() {
