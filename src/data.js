@@ -16,7 +16,7 @@ export default {
     }, {
       type: 'personal',
       title: 'Personal work',
-      url: 'https://dreampipe.jamthom.io'
+      url: 'https://personal.jamthom.io'
     }, {
       type: 'instagram',
       title: '@singular_body',
