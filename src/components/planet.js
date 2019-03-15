@@ -4,7 +4,6 @@ import Icon from 'Styles/icon'
 import Tooltip from 'Styles/tooltip'
 import Outer from 'Styles/planet'
 import TooltipInner from 'Styles/tooltip-inner'
-import ReactGA from 'react-ga'
 
 class Orbit {
   constructor({ ele, index, total }) {
@@ -83,11 +82,6 @@ export default class Planet extends Component {
 
   handleClick(e) {
     e.preventDefault();
-    ReactGA.event({
-      category: 'Social',
-      action: 'Clicked social link',
-      value: this.props.icon
-    });
     window.open(this.props.href);
   }
 
