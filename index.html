@@ -1,37 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'UA-133839923-1');
-    </script>
-    <meta charset="utf-8">
-    <meta name=viewport content="width=device-width,initial-scale=1">
-    <title>James Thomson - Frontend developer Copenhagen</title>
-    <meta property="og:image" content="https://jamthom.io/me.jpg">
-    <meta name="twitter:image" content="https://jamthom.io/me.jpg">
-    <meta property="og:image:width" content="708">
-    <meta property="og:image:height" content="708">
-    <style media="screen">
-      html, body {
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        background-image: radial-gradient(50% 150%, #FFFFFF 50%, #E9E9E9 100%);
-      }
-      main {
-        display: none;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="app"></div>
-    <% if ('%NODE_ENV%' === 'development') { %>
-      <script type="text/javascript" src="/dist/build.js"></script>
-    <% } %>
-  </body>
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-133839923-1');
+  </script>
+  <meta charset="utf-8">
+  <meta name=viewport content="width=device-width,initial-scale=1">
+  <title>JamThom</title>
+  <meta property="og:image" content="https://jamthom.io/me.jpg">
+  <meta name="twitter:image" content="https://jamthom.io/me.jpg">
+  <meta property="og:image:width" content="708">
+  <meta property="og:image:height" content="708">
+  <style media="screen">
+    h2 {
+      display: inline;
+    }
+
+    .hover {
+      display: none;
+    }
+
+    h2:hover .unhover {
+      display: none;
+    }
+
+    h2:hover .hover {
+      display: inline;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Jamie's creative output:</h1>
+  <ul>
+
+    <li><a title="Varm Køleskab" target="blank" href="https://500px.com/varm_koleskab">
+        <h2>📷 <span class="unhover">Varm Køleskab</span><span class="hover">Photography.</span></h2>
+      </a></li>
+    <br />
+    <li><a title="Melodies From Mars" target="blank" href="https://soundcloud.com/melodiesfrommars">
+        <h2>🎧 <span class="unhover">Melodies From Mars</span><span class="hover">Music.</span></h2>
+      </a></li>
+    <br />
+    <li><a title="HTML5 Drum Machine" target="blank" href="http://www.html5drummachine.fun/">
+        <h2>🥁 <span class="unhover">HTML5 Drum machine</span><span class="hover">Drum machine emulator.</span></h2>
+      </a></li>
+    <br />
+    <li><a title="DreamPipe" target="blank" href="https://dreampipe.fun/">
+        <h2>✨ <span class="unhover">DreamPipe</span><span class="hover">Synth emulator.</span></h2>
+      </a></li>
+    <br />
+    <li><a title="Electronium" target="blank" href="https://electronium.jamthom.io/">
+        <h2>🎛️ <span class="unhover">Electronium</span><span class="hover">Psychedelic synth.</span></h2>
+      </a></li>
+    <br />
+    <li><a title="Get in touch" href="mailto:jtpublicaddress@gmail.com">
+        <h2>📧 <span class="unhover">JamThom</span><span class="hover">Get in touch!</span></h2>
+      </a></li>
+  </ul>
+</body>
+
 </html>
